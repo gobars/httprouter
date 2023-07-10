@@ -336,9 +336,9 @@ func TestTreeCatchAllConflictRoot(t *testing.T) {
 	testRoutes(t, routes)
 }
 
-func TestTreeCatchMaxParams(t *testing.T) {
+func TestTreeCatchMaxParams(*testing.T) {
 	tree := &node{}
-	var route = "/cmd/*filepath"
+	route := "/cmd/*filepath"
 	tree.addRoute(route, fakeHandler(route))
 }
 
@@ -701,7 +701,7 @@ func TestTreeWildcardConflictEx(t *testing.T) {
 }
 
 func TestRedirectTrailingSlash(t *testing.T) {
-	var data = []struct {
+	data := []struct {
 		path string
 	}{
 		{"/hello/:name"},
